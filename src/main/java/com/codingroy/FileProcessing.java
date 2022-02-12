@@ -42,7 +42,7 @@ public class FileProcessing {
         FileWriter fw = new FileWriter(outputFile);
         BufferedWriter bw = new BufferedWriter(fw);
         persons.stream().sorted(sortMethod).forEach(System.out::println);
-        persons.stream().forEach(person -> {
+        persons.stream().sorted(sortMethod).forEach(person -> {
             try {
                 bw.write(person + "\n");
             } catch (IOException e) {
