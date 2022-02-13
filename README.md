@@ -49,6 +49,8 @@ The execution outcomes are demonstrated in the below screenshot:
 
 The generated `names-sorted.txt` is saved in the `./src/main/resources/outputs` directory.
 
+__For video demonstration of running the program, [Click here](https://youtu.be/NlahXDRH9ec).__
+
 ### Dependencies
 
 * Maven - package manager
