@@ -27,12 +27,15 @@ public class FileProcessing {
     }
 
     public static String processFileName(String inputFilePath) {
-        String fullString = inputFilePath;
-        int startPosition = fullString.lastIndexOf("/");
-        int endPosition = fullString.lastIndexOf(".");
+        int startPosition = inputFilePath.lastIndexOf("/");
+        int endPosition = inputFilePath.lastIndexOf(".");
         String sortedFileName = null;
-        if (endPosition > -1) {
-            sortedFileName = fullString.substring(startPosition + 1, endPosition);
+        if (endPosition == -1 || endPosition == 0) {
+            System.out.println("Please enter the location of a text file.");
+        } else if (startPosition == -1) {
+            sortedFileName = inputFilePath.substring(0, endPosition);
+        } else {
+            sortedFileName = inputFilePath.substring(startPosition + 1, endPosition);
         }
         return sortedFileName;
     }

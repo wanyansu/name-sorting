@@ -1,12 +1,10 @@
 package com.codingroy;
 
 import java.io.*;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class sortNames {
 
     public static void main(String[] args) throws IOException {
         if (args.length == 1) {
