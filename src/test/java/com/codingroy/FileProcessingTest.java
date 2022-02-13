@@ -51,7 +51,7 @@ class FileProcessingTest {
         testList1 = FileProcessing.readText(testFile1);
         Comparator<Person> lastThenFirst = Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName);
         FileProcessing.saveToFile("names-test1", testList1, lastThenFirst);
-        File expectedFile = new File("./src/main/resources/outputs/expected-test1.txt");
+        File expectedFile = new File("./src/main/resources/outputs/expectedfiles/expected-test1.txt");
         File returnedFile = new File("./src/main/resources/outputs/names-test1-sorted.txt");
         assertThat(expectedFile).hasSameTextualContentAs(returnedFile);
     }

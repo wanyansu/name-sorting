@@ -30,6 +30,8 @@ public class FileProcessing {
         int startPosition = inputFilePath.lastIndexOf("/");
         int endPosition = inputFilePath.lastIndexOf(".");
         String sortedFileName = null;
+
+        // Slice the input to capture the output file name by identifying the position of "/" and "."
         if (endPosition == -1 || endPosition == 0) {
             System.out.println("Please enter the location of a text file.");
         } else if (startPosition == -1) {
